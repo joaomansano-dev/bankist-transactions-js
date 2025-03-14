@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
@@ -18,16 +18,18 @@
     <!-- TOP NAVIGATION -->
     <nav>
       <p class="welcome">Log in to get started</p>
-      <img src="logo.png" alt="Logo" class="logo" />
+      <img src="img/logo.png" alt="Logo" class="logo" />
       <form class="login">
+        <button class="logout__btn" disabled>
+          <img src="img/logout-icon.png" alt="Logout" class="logout__icon" />
+        </button>
         <input
           type="text"
           placeholder="user"
           class="login__input login__input--user"
         />
-        <!-- In practice, use type="password" -->
         <input
-          type="text"
+          type="password"
           placeholder="PIN"
           maxlength="4"
           class="login__input login__input--pin"

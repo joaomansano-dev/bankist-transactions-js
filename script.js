@@ -65,6 +65,8 @@ const containerApp = document.querySelector('.app');
 const containerMovements = document.querySelector('.movements');
 
 const btnLogin = document.querySelector('.login__btn');
+const btnLogOut = document.querySelector('.logout__btn');
+const btnLogOutIcon = document.querySelector('.logout__icon');
 const btnTransfer = document.querySelector('.form__btn--transfer');
 const btnLoan = document.querySelector('.form__btn--loan');
 const btnClose = document.querySelector('.form__btn--close');
@@ -254,8 +256,22 @@ let currentAccount;
 // updateUi(currentAccount);
 // containerApp.style.opacity = 100;
 
+inputLoginPin.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    btnLogin.click();
+    console.log('keypress event no inputPin');
+  }
+});
+
+inputLoginUsername.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    btnLogin.click();
+  }
+});
+
 btnLogin.addEventListener('click', function (event) {
   event.preventDefault();
+  console.log('Botão de login clicado');
 
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
@@ -288,15 +304,37 @@ btnLogin.addEventListener('click', function (event) {
       dateTime
     ).format(now);
 
+    updateUi(currentAccount);
+
     //Clear the texts of inputLogin and inputPin
     inputLoginUsername.value = '';
     inputLoginPin.value = '';
     inputLoginPin.blur();
 
-    updateUi(currentAccount);
+    // updateUi(currentAccount);
     console.log('LogIn Efetuated');
     startLogOutTimer();
   }
+
+  //Starting the logOut button
+  btnLogOut.removeAttribute('disabled');
+  btnLogOut.style.cursor = 'pointer';
+  btnLogOutIcon.style.opacity = 100;
+});
+
+btnLogOut.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  console.log(' Evento começado!!');
+  // btnLogOut.style.cursor = 'default';
+  // btnLogOutIcon.style.opacity = 0;
+
+  currentAccount = null;
+  containerApp.style.opacity = 0;
+  labelWelcome.textContent = 'Log in to get started ';
+
+  btnLogOut.style.cursor = 'default';
+  btnLogOutIcon.style.opacity = 0;
 });
 
 btnTransfer.addEventListener('click', function (e) {

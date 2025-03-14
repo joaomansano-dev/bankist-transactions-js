@@ -75,6 +75,25 @@ nav {
   transition: all 0.3s;
 }
 
+.logout__btn {
+  border: none;
+  background: none;
+  width: 30px; /* Permite que o tamanho seja ajustado automaticamente */
+  height: auto; /* Permite que o tamanho seja ajustado automaticamente */
+  display: flex; /* Garante que a imagem dentro seja tratada corretamente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  cursor: default;
+}
+
+.logout__icon {
+  margin-right: 50px;
+  width: 25px; /* Define o tamanho correto */
+  height: 30px;
+  display: block;
+  opacity: 0; /* Garante que a imagem seja renderizada corretamente */
+}
+
 .login__btn:hover,
 .login__btn:focus,
 .btn--sort:hover,
