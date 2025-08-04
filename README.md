@@ -1,5 +1,5 @@
 # bankist-transações em JS
-Nesse projeto, foi utilizado um bankist no qual o intuito é que possamos adicionar algumas funcionalidades, focando principamente em JavaScript. Como exemplo de funcionalidades atingidas: como fazer transações entre contas, pedir empréstimo e cancelar sua própria conta. Além disso, utilizei Dates, Intl, Numbers e Timers pela primeira vez. 
+Nesse projeto, foi utilizado um bankist no qual o intuito é que possamos adicionar algumas funcionalidades focando principamente em JavaScript. Como exemplo de funcionalidades atingidas: como fazer transações entre contas, pedir empréstimo e cancelar sua própria conta. Além disso, utilizei Dates, Intl, Numbers e Timers pela primeira vez. 
 
 ## Sobre a utilização do projeto em si:
 - **Contas:** Há duas contas -> Joao Mansano (pin = 1111) e Martina Suarez (pin = 2222).
